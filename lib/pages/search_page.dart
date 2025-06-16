@@ -69,16 +69,28 @@ class SearchPage extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
+                    
+                        Row(
+                        children: [
+
+                          const SizedBox(width: 4),
+                          Expanded(
+                            child: Text(
+                             'UGX ${item['price']}', 
+                               style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black87,
+                         ),
+                            ),
+                            
+                          ),
+                          Icon(Icons.favorite)
+                        ],
+                      ), 
+
                       const SizedBox(height: 5),
-                      Text(
-                        'UGX ${item['price']}',
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87,
-                        ),
-                      ),
-                      const SizedBox(height: 5),
+                      
                       Text(
                         item['description']!,
                         style: const TextStyle(fontSize: 15, color: Colors.black54),
